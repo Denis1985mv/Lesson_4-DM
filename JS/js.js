@@ -44,24 +44,7 @@ switch (check) {
   case "2":
     check = par(check);
     break;
-  case "3":
-    check = parSb(check);
-    break;
-  case "4":
-    check = parOb(check);
-    break;
-  case "5":
-    check = Prism(check);
-    break;
-  case "6":
-    check = PrismS(check);
-    break;
-  case "7":
-    check = Pyromide(check);
-    break;
-  case "8":
-    check = PyromideS(check);
-    break;
+  
 
   default:
     document.write(" Вы ввели не то действие, обновите страницу.");
