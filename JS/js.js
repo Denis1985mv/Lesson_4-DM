@@ -57,7 +57,7 @@ let velueAcss = prompt(
 
 xAcss = 0;
 if (velueAcss <= 1 && velueAcss > 0 ) {
-  let velueCoAcss = prompt(`Сколько аксессуаров Вы хотите купить (стоисоть ${velueaAccess}):`);
+  let velueCoAcss = prompt(`Сколько аксессуаров Вы хотите купить (стоимость 1шт = ${velueaAccess}):`);
   
   resultAcss = 0;
   countAcss = 0;
