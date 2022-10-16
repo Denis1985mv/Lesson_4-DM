@@ -13,6 +13,7 @@ let resultAcss = 0;
 let countAcss = 0;
 let xAcss = 0;
 let countBalanceAcss = 0;
+let taxnds = 0.2;
 
 while(x < velueCount){
 
@@ -26,10 +27,12 @@ console.log(result)
 }
 
 let velBalance = velueBalanc - countBalance;
+let velBalancetaxs = countBalance * taxnds;
+let totalBalanceTel = velBalance - velBalancetaxs;
 
 document.write(`Сумма закупки ${countBalance}, 
 остаток вышего баланса составляет ${velBalance}, 
-колчичество телефонов Вы купили ${x}`);
+колчичество телефонов Вы купили ${x}, налог НДС составил ${velBalancetaxs}, остаток на балансе после вычета налогова - ${totalBalanceTel}`);
 
 let velueAcss = prompt("Если Вы хотите докупить Аксессуары нажмите 1 \n если нет то нажмите 2");
 
@@ -48,14 +51,33 @@ while(xAcss < velueCoAcss){
 
 }
 
-let velBalanceaAcss = velBalance - countBalanceAcss;
+let velBalanceaAcss = totalBalanceTel - countBalanceAcss;
+let velBalanceaAcsstaxs = countBalanceAcss * taxnds;
+let totalBalance = velBalanceaAcss - velBalanceaAcsstaxs;
 
 document.write("<br>");
 document.write(`Сумма закупки акссесуаров ${countBalanceAcss}, 
 остаток вышего баланса составляет ${velBalanceaAcss}, 
-Вы купили колчичество аксессуаров ${xAcss}`);
+  Вы купили колчичество аксессуаров ${xAcss}, налог НДС составил ${velBalanceaAcsstaxs}, итоговый баланс после вычета налогов ${totalBalance}`);
 
 console.log(velueBalanc);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // switch (check) {
