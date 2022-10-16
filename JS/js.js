@@ -52,12 +52,12 @@ document.write(`Месяц ${mounthIterVel}. Сумма закупки ${countBa
 velueBalanc = velueBalanc - velBalancetaxs;
 
 let velueAcss = prompt(
-  "Если Вы хотите докупить Аксессуары нажмите 1 \n если нет то нажмите 2(или любую цифру кроме 1)"
+  "Если Вы хотите докупить аксессуары нажмите 1 \n если нет то нажмите 2(или любую цифру кроме 1)"
 );
 
 xAcss = 0;
 if (velueAcss <= 1 && velueAcss > 0 ) {
-  let velueCoAcss = prompt("Сколько акссесуаров Вы хотите купить: ");
+  let velueCoAcss = prompt("Сколько аксессуаров Вы хотите купить: ");
   
   resultAcss = 0;
   countAcss = 0;
