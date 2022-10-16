@@ -53,7 +53,7 @@ let velueAcss = prompt(
   "Если Вы хотите докупить Аксессуары нажмите 1 \n если нет то нажмите 2"
 );
 
-if (velueAcss < 2 && velueAcss) {
+if (velueAcss <= 1) {
   let velueCoAcss = prompt("Сколько акссесуаров Вы хотите купить: ");
   xAcss = 0;
   resultAcss = 0;
