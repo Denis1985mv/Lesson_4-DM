@@ -86,6 +86,8 @@ console.log(velueBalanc);
 
 ++mounthIter;
 document.write("<br>");
+countBalanceAcss = 0;
+countBalance = 0;
 }
 
 
