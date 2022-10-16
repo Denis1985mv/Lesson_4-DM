@@ -1,7 +1,8 @@
 let velue = prompt("Введите баланс на закупку телефонов: ");
-let velueCo = prompt("Сколько телефонов Вы хотите купить: ");
+let velueMounth = prompt("Введите на сколько месяцев сделать расчет: ");
+
 let velueBalanc = Number(velue);
-let velueCount = Number(velueCo);
+let mounth = Number(velueMounth);
 
 const velueTelephone = 50;
 const velueaAccess = 10;
@@ -13,66 +14,79 @@ let resultAcss = 0;
 let countAcss = 0;
 let xAcss = 0;
 let countBalanceAcss = 0;
-let taxnds = 0.2;
+const taxnds = 0.2;
+let velBalanceaAcsstaxs = 0;
+let totalBalance = 0;
+let mounthIter = 0;
 
-while(x < velueCount){
 
-result = velueTelephone;
-count += result;
-countBalance =  Number(count);
-++x;
+while(mounth > mounthIter){
+let velueCo = prompt("Сколько телефонов Вы хотите купить: ");
+let velueCount = Number(velueCo);
 
-console.log(result)
+x=0;
+result = 0;
+  count = 0;
+  countBalance = 0;
+while (x < velueCount) {
+  
+  result = velueTelephone;
+  count += result;
+  countBalance = Number(count);
+  ++x;
 
+  console.log(result);
 }
 
-let velBalance = velueBalanc - countBalance;
+velueBalanc = velueBalanc - countBalance;
 let velBalancetaxs = countBalance * taxnds;
-let totalBalanceTel = velBalance - velBalancetaxs;
+let totalBalanceTel = velueBalanc - velBalancetaxs;
 
 document.write(`Сумма закупки ${countBalance}, 
-остаток вышего баланса составляет ${velBalance}, 
-колчичество телефонов Вы купили ${x}, налог НДС составил ${velBalancetaxs}, остаток на балансе после вычета налогова - ${totalBalanceTel}`);
+остаток вышего баланса составляет ${velueBalanc}, 
+колчичество телефонов Вы купили ${x}, налог НДС составил ${velBalancetaxs}, 
+остаток на балансе после вычета налогова - ${totalBalanceTel}`);
 
-let velueAcss = prompt("Если Вы хотите докупить Аксессуары нажмите 1 \n если нет то нажмите 2");
+velueBalanc = velueBalanc - velBalancetaxs;
 
-if(velueAcss < 2 && velueAcss){
+let velueAcss = prompt(
+  "Если Вы хотите докупить Аксессуары нажмите 1 \n если нет то нажмите 2"
+);
+
+if (velueAcss < 2 && velueAcss) {
   let velueCoAcss = prompt("Сколько акссесуаров Вы хотите купить: ");
-while(xAcss < velueCoAcss){
- 
-  resultAcss = velueaAccess;
-  countAcss += resultAcss;
-  countBalanceAcss =  Number(countAcss);
-  ++xAcss;
-
+  xAcss = 0;
+  resultAcss = 0;
+  countAcss = 0;
+  countBalanceAcss = 0;
+  while (xAcss < velueCoAcss) {
+   
+    resultAcss = velueaAccess;
+    countAcss += resultAcss;
+    countBalanceAcss = Number(countAcss);
+    ++xAcss;
+  }
+} else {
 }
 
-}else{
-
-}
-
-let velBalanceaAcss = totalBalanceTel - countBalanceAcss;
-let velBalanceaAcsstaxs = countBalanceAcss * taxnds;
-let totalBalance = velBalanceaAcss - velBalanceaAcsstaxs;
+velueBalanc = velueBalanc - countBalanceAcss;
+velBalanceaAcsstaxs = countBalanceAcss * taxnds;
+totalBalance = velueBalanc - velBalanceaAcsstaxs;
+console.log("здесь", velBalanceaAcsstaxs);
 
 document.write("<br>");
 document.write(`Сумма закупки акссесуаров ${countBalanceAcss}, 
-остаток вышего баланса составляет ${velBalanceaAcss}, 
-  Вы купили колчичество аксессуаров ${xAcss}, налог НДС составил ${velBalanceaAcsstaxs}, итоговый баланс после вычета налогов ${totalBalance}`);
+остаток вышего баланса составляет ${velueBalanc}, 
+Вы купили колчичество аксессуаров ${xAcss}, налог НДС составил ${velBalanceaAcsstaxs}, 
+итоговый баланс после вычета налогов ${totalBalance}`);
+
+velueBalanc = velueBalanc - velBalanceaAcsstaxs;
 
 console.log(velueBalanc);
 
-
-
-
-
-
-
-
-
-
-
-
+++mounthIter;
+document.write("<br>");
+}
 
 
 
