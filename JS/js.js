@@ -45,9 +45,9 @@ let velBalancetaxs = countBalance * taxnds;
 let totalBalanceTel = velueBalanc - velBalancetaxs;
 
 document.write(`Месяц ${mounthIterVel}. Сумма закупки ${countBalance} рб, 
-остаток вышего баланса составляет ${velueBalanc} рб, 
+остаток Вашего баланса составляет ${velueBalanc} рб, 
 количество телефонов которые Вы купили ${x}, налог НДС составил ${velBalancetaxs} рб, 
-остаток на балансе после вычета налогова ${totalBalanceTel} рб`);
+остаток на балансе после вычета налогов ${totalBalanceTel} рб`);
 
 velueBalanc = velueBalanc - velBalancetaxs;
 
@@ -80,9 +80,9 @@ console.log("здесь", velBalanceaAcsstaxs);
 
 
 document.write("<br>");
-document.write(`Сумма закупки акссесуаров ${countBalanceAcss}, 
-остаток вышего баланса составляет ${velueBalanc} рб, 
-Вы купили колчичество аксессуаров ${xAcss} рб, налог НДС составил ${velBalanceaAcsstaxs} рб, 
+document.write(`Сумма закупки аксессуаров ${countBalanceAcss}, 
+остаток Вашего баланса составляет ${velueBalanc} рб, 
+Вы купили  количество аксессуаров ${xAcss} рб, налог НДС составил ${velBalanceaAcsstaxs} рб, 
 итоговый баланс после вычета налогов ${totalBalance} рб`);
 document.write("<br>");
 
