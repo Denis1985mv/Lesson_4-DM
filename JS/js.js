@@ -6,6 +6,7 @@ let mounth = Number(velueMounth);
 
 const velueTelephone = 50;
 const velueaAccess = 10;
+const taxnds = 0.2;
 let count = 0;
 let countBalance = 0;
 let result = 0;
@@ -14,14 +15,15 @@ let resultAcss = 0;
 let countAcss = 0;
 let xAcss = 0;
 let countBalanceAcss = 0;
-const taxnds = 0.2;
 let velBalanceaAcsstaxs = 0;
 let totalBalance = 0;
 let mounthIter = 0;
 let mounthIterVel = 1;
+let velueBalancTest = Number(velue);
 
 while(mounth > mounthIter){
-let velueCo = prompt(`Месяц ${mounthIterVel} Сколько телефонов Вы хотите купить(стоимость одного телефона -${velueTelephone} рб), на балансе еще осталось ${velueBalanc} (с учетом вычета налогов):`);
+if(velueBalanc >= 0){
+let velueCo = prompt(`Месяц ${mounthIterVel} Сколько телефонов Вы хотите купить(стоимость одного телефона -${velueTelephone} рб), на балансе еще осталось ${velueBalanc} рб (с учетом вычета налогов):`);
 let velueCount = Number(velueCo);
 
   x=0;
@@ -42,10 +44,10 @@ velueBalanc = velueBalanc - countBalance;
 let velBalancetaxs = countBalance * taxnds;
 let totalBalanceTel = velueBalanc - velBalancetaxs;
 
-document.write(`Месяц ${mounthIterVel}. Сумма закупки ${countBalance}, 
-остаток вышего баланса составляет ${velueBalanc}, 
-количество телефонов которые Вы купили ${x}, налог НДС составил ${velBalancetaxs}, 
-остаток на балансе после вычета налогова - ${totalBalanceTel}`);
+document.write(`Месяц ${mounthIterVel}. Сумма закупки ${countBalance} рб, 
+остаток вышего баланса составляет ${velueBalanc} рб, 
+количество телефонов которые Вы купили ${x}, налог НДС составил ${velBalancetaxs} рб, 
+остаток на балансе после вычета налогова ${totalBalanceTel} рб`);
 
 velueBalanc = velueBalanc - velBalancetaxs;
 
@@ -79,9 +81,9 @@ console.log("здесь", velBalanceaAcsstaxs);
 
 document.write("<br>");
 document.write(`Сумма закупки акссесуаров ${countBalanceAcss}, 
-остаток вышего баланса составляет ${velueBalanc}, 
-Вы купили колчичество аксессуаров ${xAcss}, налог НДС составил ${velBalanceaAcsstaxs}, 
-итоговый баланс после вычета налогов ${totalBalance}`);
+остаток вышего баланса составляет ${velueBalanc} рб, 
+Вы купили колчичество аксессуаров ${xAcss} рб, налог НДС составил ${velBalanceaAcsstaxs} рб, 
+итоговый баланс после вычета налогов ${totalBalance} рб`);
 document.write("<br>");
 
 velueBalanc = velueBalanc - velBalanceaAcsstaxs;
@@ -93,5 +95,9 @@ console.log(velueBalanc);
 document.write("<br>");
 countBalanceAcss = 0;
 countBalance = 0;
+}else{
+  alert(`Не хватает средств, баланс ${velueBalanc} рб. Вы не рассчитали баланс!`);
+  break;
+}
 }
 
