@@ -18,14 +18,14 @@ const taxnds = 0.2;
 let velBalanceaAcsstaxs = 0;
 let totalBalance = 0;
 let mounthIter = 0;
-
+let mounthIterVel = 1;
 
 while(mounth > mounthIter){
-let velueCo = prompt("Сколько телефонов Вы хотите купить: ");
+let velueCo = prompt(`Месяц ${mounthIterVel} Сколько телефонов Вы хотите купить(стоимость одного телефона -${velueTelephone} рб), на балансе еще осталось ${velueBalanc} (с учетом вычета налогов):`);
 let velueCount = Number(velueCo);
 
-x=0;
-result = 0;
+  x=0;
+  result = 0;
   count = 0;
   countBalance = 0;
 while (x < velueCount) {
@@ -42,15 +42,15 @@ velueBalanc = velueBalanc - countBalance;
 let velBalancetaxs = countBalance * taxnds;
 let totalBalanceTel = velueBalanc - velBalancetaxs;
 
-document.write(`Сумма закупки ${countBalance}, 
+document.write(`Месяц ${mounthIterVel}. Сумма закупки ${countBalance}, 
 остаток вышего баланса составляет ${velueBalanc}, 
-колчичество телефонов Вы купили ${x}, налог НДС составил ${velBalancetaxs}, 
+количество телефонов которые Вы купили ${x}, налог НДС составил ${velBalancetaxs}, 
 остаток на балансе после вычета налогова - ${totalBalanceTel}`);
 
 velueBalanc = velueBalanc - velBalancetaxs;
 
 let velueAcss = prompt(
-  "Если Вы хотите докупить Аксессуары нажмите 1 \n если нет то нажмите 2"
+  "Если Вы хотите докупить Аксессуары нажмите 1 \n если нет то нажмите 2(или любую цифру кроме 1)"
 );
 
 if (velueAcss <= 1 && velueAcss > 0 ) {
@@ -65,8 +65,10 @@ if (velueAcss <= 1 && velueAcss > 0 ) {
     countAcss += resultAcss;
     countBalanceAcss = Number(countAcss);
     ++xAcss;
+    
   }
 } else {
+
 }
 
 velueBalanc = velueBalanc - countBalanceAcss;
@@ -74,17 +76,20 @@ velBalanceaAcsstaxs = countBalanceAcss * taxnds;
 totalBalance = velueBalanc - velBalanceaAcsstaxs;
 console.log("здесь", velBalanceaAcsstaxs);
 
+
 document.write("<br>");
 document.write(`Сумма закупки акссесуаров ${countBalanceAcss}, 
 остаток вышего баланса составляет ${velueBalanc}, 
 Вы купили колчичество аксессуаров ${xAcss}, налог НДС составил ${velBalanceaAcsstaxs}, 
 итоговый баланс после вычета налогов ${totalBalance}`);
+document.write("<br>");
 
 velueBalanc = velueBalanc - velBalanceaAcsstaxs;
 
 console.log(velueBalanc);
 
 ++mounthIter;
+++mounthIterVel;
 document.write("<br>");
 countBalanceAcss = 0;
 countBalance = 0;
