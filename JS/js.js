@@ -46,7 +46,7 @@ let totalBalanceTel = velueBalanc - velBalancetaxs;
 
 document.write(`Месяц ${mounthIterVel}. Сумма закупки ${countBalance} рб, 
 остаток Вашего баланса составляет ${velueBalanc} рб, 
-количество телефонов которые Вы купили ${x}, налог НДС составил ${velBalancetaxs} рб, 
+количество телефонов которые Вы купили ${x} шт, налог НДС составил ${velBalancetaxs} рб, 
 остаток на балансе после вычета налогов ${totalBalanceTel} рб`);
 
 velueBalanc = velueBalanc - velBalancetaxs;
@@ -55,9 +55,10 @@ let velueAcss = prompt(
   "Если Вы хотите докупить Аксессуары нажмите 1 \n если нет то нажмите 2(или любую цифру кроме 1)"
 );
 
+xAcss = 0;
 if (velueAcss <= 1 && velueAcss > 0 ) {
   let velueCoAcss = prompt("Сколько акссесуаров Вы хотите купить: ");
-  xAcss = 0;
+  
   resultAcss = 0;
   countAcss = 0;
   countBalanceAcss = 0;
@@ -82,7 +83,7 @@ console.log("здесь", velBalanceaAcsstaxs);
 document.write("<br>");
 document.write(`Сумма закупки аксессуаров ${countBalanceAcss}, 
 остаток Вашего баланса составляет ${velueBalanc} рб, 
-Вы купили  количество аксессуаров ${xAcss} рб, налог НДС составил ${velBalanceaAcsstaxs} рб, 
+Вы купили  количество аксессуаров ${xAcss} шт, налог НДС составил ${velBalanceaAcsstaxs} рб, 
 итоговый баланс после вычета налогов ${totalBalance} рб`);
 document.write("<br>");
 
