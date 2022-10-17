@@ -32,6 +32,7 @@ switch (check) {
     document.write(" Вы ввели не то действие, обновите страницу.");
 }
 
+<<<<<<< HEAD
 // function sum(x, y) {
 //   let sumResult = x + y;
 //   return sumResult;
@@ -88,3 +89,7 @@ switch (check) {
 // 	}
 
 // 	cube();
+=======
+
+
+>>>>>>> 9e8adee6e4c4146b3531847ea31bd0174ceb69ec
