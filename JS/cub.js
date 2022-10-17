@@ -114,3 +114,4 @@ function parOb() {
     `Результат: объем - ${resultPl}, площадь  - ${result}, диаганаль ${resultD}`
   );
 }
+
