@@ -1,5 +1,5 @@
 let velue = prompt("Введите баланс на закупку телефонов: ");
-let velueMounth = prompt("Введите на сколько месяцев сделать расчет: ");
+let velueMounth = prompt("Введите на сколько месяцев сделать расcчет: ");
 
 let velueBalanc = Number(velue);
 let mounth = Number(velueMounth);
