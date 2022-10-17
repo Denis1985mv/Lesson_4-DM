@@ -1,12 +1,11 @@
 let velue = prompt("Введите баланс на закупку телефонов: ");
 let velueMounth = prompt("Введите на сколько месяцев сделать расcчет: ");
 
-let velueBalanc = Number(velue);
-let mounth = Number(velueMounth);
-
 const velueTelephone = 50;
 const velueaAccess = 10;
 const taxnds = 0.2;
+let velueBalanc = Number(velue);
+let mounth = Number(velueMounth);
 let count = 0;
 let countBalance = 0;
 let result = 0;
