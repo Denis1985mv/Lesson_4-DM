@@ -1,11 +1,11 @@
-let velue = prompt("Введите баланс на закупку телефонов: ");
-let velueMounth = prompt("Введите на сколько месяцев сделать расcчет: ");
+let value = prompt("Введите баланс на закупку телефонов: ");
+let valueMounth = prompt("Введите на сколько месяцев сделать расcчет: ");
 
-const velueTelephone = 50;
-const velueaAccess = 10;
+const valueTelephone = 50;
+const valueaAccess = 10;
 const taxnds = 0.2;
-let velueBalanc = Number(velue);
-let mounth = Number(velueMounth);
+let valueBalanc = Number(value);
+let mounth = Number(valueMounth);
 let count = 0;
 let countBalance = 0;
 let result = 0;
@@ -14,24 +14,24 @@ let resultAcss = 0;
 let countAcss = 0;
 let xAcss = 0;
 let countBalanceAcss = 0;
-let velBalanceaAcsstaxs = 0;
+let valBalanceaAcsstaxs = 0;
 let totalBalance = 0;
 let mounthIter = 0;
 let mounthIterVel = 1;
-let velueBalancTest = Number(velue);
+
 
 while(mounth > mounthIter){
-if(velueBalanc >= 0){
-let velueCo = prompt(`Месяц ${mounthIterVel} Сколько телефонов Вы хотите купить(стоимость одного телефона -${velueTelephone} рб), на балансе еще осталось ${velueBalanc} рб (с учетом вычета налогов):`);
-let velueCount = Number(velueCo);
+if(valueBalanc >= 0){
+let valueCo = prompt(`Месяц ${mounthIterVel} Сколько телефонов Вы хотите купить(стоимость одного телефона -${valueTelephone} рб), на балансе еще осталось ${valueBalanc} рб (с учетом вычета налогов):`);
+let valueCount = Number(valueCo);
 
   x=0;
   result = 0;
   count = 0;
   countBalance = 0;
-while (x < velueCount) {
+while (x < valueCount) {
   
-  result = velueTelephone;
+  result = valueTelephone;
   count += result;
   countBalance = Number(count);
   ++x;
@@ -39,31 +39,31 @@ while (x < velueCount) {
   console.log(result);
 }
 
-velueBalanc = velueBalanc - countBalance;
-let velBalancetaxs = countBalance * taxnds;
-let totalBalanceTel = velueBalanc - velBalancetaxs;
+valueBalanc = valueBalanc - countBalance;
+let valBalancetaxs = countBalance * taxnds;
+let totalBalanceTel = valueBalanc - valBalancetaxs;
 
 document.write(`Месяц ${mounthIterVel}. Сумма закупки ${countBalance} рб, 
-остаток Вашего баланса составляет ${velueBalanc} рб, 
-количество телефонов которые Вы купили ${x} шт, налог НДС составил ${velBalancetaxs} рб, 
+остаток Вашего баланса составляет ${valueBalanc} рб, 
+количество телефонов которые Вы купили ${x} шт, налог НДС составил ${valBalancetaxs} рб, 
 остаток на балансе после вычета налогов ${totalBalanceTel} рб`);
 
-velueBalanc = velueBalanc - velBalancetaxs;
+valueBalanc = valueBalanc - valBalancetaxs;
 
-let velueAcss = prompt(
+let valueAcss = prompt(
   "Если Вы хотите докупить аксессуары нажмите 1 \n если нет то нажмите 2(или любую цифру кроме 1)"
 );
 
 xAcss = 0;
-if (velueAcss <= 1 && velueAcss > 0 ) {
-  let velueCoAcss = prompt(`Сколько аксессуаров Вы хотите купить (стоимость 1шт = ${velueaAccess} рб):`);
+if (valueAcss <= 1 && valueAcss > 0 ) {
+  let valueCoAcss = prompt(`Сколько аксессуаров Вы хотите купить (стоимость 1шт = ${valueaAccess} рб):`);
   
   resultAcss = 0;
   countAcss = 0;
   countBalanceAcss = 0;
-  while (xAcss < velueCoAcss) {
+  while (xAcss < valueCoAcss) {
    
-    resultAcss = velueaAccess;
+    resultAcss = valueaAccess;
     countAcss += resultAcss;
     countBalanceAcss = Number(countAcss);
     ++xAcss;
@@ -73,22 +73,22 @@ if (velueAcss <= 1 && velueAcss > 0 ) {
 
 }
 
-velueBalanc = velueBalanc - countBalanceAcss;
-velBalanceaAcsstaxs = countBalanceAcss * taxnds;
-totalBalance = velueBalanc - velBalanceaAcsstaxs;
-console.log("здесь", velBalanceaAcsstaxs);
+valueBalanc = valueBalanc - countBalanceAcss;
+valBalanceaAcsstaxs = countBalanceAcss * taxnds;
+totalBalance = valueBalanc - valBalanceaAcsstaxs;
+console.log("здесь", valBalanceaAcsstaxs);
 
 
 document.write("<br>");
 document.write(`Сумма закупки аксессуаров ${countBalanceAcss}, 
-остаток Вашего баланса составляет ${velueBalanc} рб, 
-Вы купили  количество аксессуаров ${xAcss} шт, налог НДС составил ${velBalanceaAcsstaxs} рб, 
+остаток Вашего баланса составляет ${valueBalanc} рб, 
+Вы купили  количество аксессуаров ${xAcss} шт, налог НДС составил ${valBalanceaAcsstaxs} рб, 
 итоговый баланс после вычета налогов ${totalBalance} рб`);
 document.write("<br>");
 
-velueBalanc = velueBalanc - velBalanceaAcsstaxs;
+valueBalanc = valueBalanc - valBalanceaAcsstaxs;
 
-console.log(velueBalanc);
+console.log(valueBalanc);
 
 ++mounthIter;
 ++mounthIterVel;
@@ -96,7 +96,7 @@ document.write("<br>");
 countBalanceAcss = 0;
 countBalance = 0;
 }else{
-  alert(`Не хватает средств, баланс ${velueBalanc} рб. Вы не рассчитали баланс!`);
+  alert(`Не хватает средств, баланс ${valueBalanc} рб. Вы не рассчитали баланс!`);
   break;
 }
 }
